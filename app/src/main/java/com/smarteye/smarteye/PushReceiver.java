@@ -12,8 +12,6 @@ import java.util.List;
 
 public class PushReceiver extends PushMessageReceiver {
 
-    public static final String TAG = PushReceiver.class.getSimpleName();
-
     @Override
     public void onBind(Context context, int i, String s, String s1, String s2, String s3) {
 

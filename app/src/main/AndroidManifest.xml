@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.smarteye.smarteye"
+    android:versionCode="1"
     android:versionName="0.01">
+
 
     <!-- Push service 运行需要的权限 -->
     <uses-permission android:name="android.permission.INTERNET" />
@@ -20,9 +22,9 @@
     <uses-permission android:name="android.permission.EXPAND_STATUS_BAR" />
 
     <!-- 适配Android N系统必需的ContentProvider写权限声明，写权限包含应用包名-->
-    <uses-permission android:name="baidu.push.permission.WRITE_PUSHINFOPROVIDER.YourPackageName" />
+    <uses-permission android:name="baidu.push.permission.WRITE_PUSHINFOPROVIDER.com.smarteye.smarteye" />
     <permission
-        android:name="baidu.push.permission.WRITE_PUSHINFOPROVIDER.YourPackageName"
+        android:name="baidu.push.permission.WRITE_PUSHINFOPROVIDER.com.smarteye.smarteye"
         android:protectionLevel="signature">
     </permission>
 
@@ -32,7 +34,7 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".home">
+        <activity android:name=".Main">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -94,7 +96,7 @@
         <provider
             android:name="com.baidu.android.pushservice.PushInfoProvider"
             android:authorities="com.smarteye.smarteye.bdpush"
-            android:writePermission="baidu.push.permission.WRITE_PUSHINFOPROVIDER.YourPackageName"
+            android:writePermission="baidu.push.permission.WRITE_PUSHINFOPROVIDER.com.smarteye.smarteye"
             android:protectionLevel = "signature"
             android:exported="true" />
 

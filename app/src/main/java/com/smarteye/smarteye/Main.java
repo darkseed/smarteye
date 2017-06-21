@@ -6,13 +6,13 @@ import android.os.Bundle;
 import com.baidu.android.pushservice.PushConstants;
 import com.baidu.android.pushservice.PushManager;
 
-public class home extends AppCompatActivity {
+public class Main extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
 
-        PushManager.startWork(getApplicationContext(), PushConstants.LOGIN_TYPE_API_KEY, "");
+        PushManager.startWork(getApplicationContext(), PushConstants.LOGIN_TYPE_API_KEY, "ewGd78lgzSQreVjrxTbDRT6e");
     }
 }
